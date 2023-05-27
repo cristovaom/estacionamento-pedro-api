@@ -7,12 +7,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-
+/**
+ * @Author: Cristovão Martins
+ */
 public class AbstractEntityDTO{
-
     @Getter
     private Long id;
-
     @Getter
     private LocalDateTime cadastro;
     @Getter
@@ -21,6 +21,6 @@ public class AbstractEntityDTO{
     @Setter
     @Column(name = "ativo")
     private boolean ativo;
-    
-    
+
+    public AbstractEntityDTO(){}
 }

@@ -13,18 +13,17 @@ public class AbstractEntity {
     @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
-
+    private Long id;
     @Getter
     @Column(name = "cadastro",nullable = false)
-    public LocalDateTime cadastro;
+    private LocalDateTime cadastro;
     @Getter
     @Column(name = "edicao")
-    public LocalDateTime edicao;
+    private LocalDateTime edicao;
     @Getter
     @Setter
     @Column(name = "ativo")
-    public boolean ativo;
+    private boolean ativo;
 
     /**
      * Método automatico, executado no pré-cadastro dos dados
