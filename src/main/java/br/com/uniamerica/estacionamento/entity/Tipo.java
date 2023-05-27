@@ -1,2 +1,7 @@
-package br.com.uniamerica.estacionamento.entity;public class Tipo {
+package br.com.uniamerica.estacionamento.entity;
+
+public enum Tipo {
+    CARRO,
+    MOTO,
+    VAN
 }
