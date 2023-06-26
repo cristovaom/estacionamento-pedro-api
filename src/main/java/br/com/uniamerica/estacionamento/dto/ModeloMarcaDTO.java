@@ -10,16 +10,16 @@ public class ModeloMarcaDTO extends AbstractEntityDTO{
     private String nome;
     @Getter
     @Setter
-    private MarcaDTO marcaDTO;
+    private MarcaDTO marca;
 
-    public ModeloMarcaDTO(String nome, MarcaDTO marcaDTO) {
+    public ModeloMarcaDTO(String nome, MarcaDTO marca) {
         this.nome = nome;
-        this.marcaDTO = marcaDTO;
+        this.marca = marca;
     }
 
     public ModeloMarcaDTO(Modelo entity) {
         id = entity.getId();
         nome = entity.getNome();
-        marcaDTO = new MarcaDTO(entity.getMarca());
+        marca = new MarcaDTO(entity.getMarca());
     }
 }

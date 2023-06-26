@@ -26,12 +26,7 @@ public class ModeloService {
         entity.setCadastro(dto.getCadastro());
         entity.setId(dto.getId());
 
-//        Marca marca = new Marca();
-//        marca.setId(dto.getMarcaDTO().getId());
-
-        Marca marca = marcaRepository.getReferenceById(dto.getMarcaDTO().getId());
-
-//        marca.setId(dto.getMarcaDTO().getId());
+        Marca marca = marcaRepository.getReferenceById(dto.getMarca().getId());
 
         entity.setMarca(marca);
 

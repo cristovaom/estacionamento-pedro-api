@@ -3,8 +3,17 @@ package br.com.uniamerica.estacionamento.services;
 import br.com.uniamerica.estacionamento.dto.MarcaDTO;
 import br.com.uniamerica.estacionamento.entities.Marca;
 import br.com.uniamerica.estacionamento.repositories.MarcaRepository;
+import br.com.uniamerica.estacionamento.services.exceptions.DatabaseException;
+import br.com.uniamerica.estacionamento.services.exceptions.ResourceNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.awt.print.Pageable;
 
 @Service
 public class MarcaService {
@@ -12,6 +21,13 @@ public class MarcaService {
     @Autowired
     private MarcaRepository marcaRepository;
 
+    @Transactional(readOnly = true)
+    public MarcaDTO findById(Long id){
+        Marca marca = marcaRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Recurso não encontrado!"));
+        return new MarcaDTO(marca);
+    }
+
+    @Transactional
     public MarcaDTO insert(MarcaDTO dto){
         Marca entity = new Marca();
         entity.setNome(dto.getNome());
@@ -21,4 +37,32 @@ public class MarcaService {
 
         return new MarcaDTO(entity);
     }
+    @Transactional
+    public MarcaDTO update(Long id,MarcaDTO marcaDTO){
+        try{
+            Marca marca = marcaRepository.getReferenceById(id);
+            copyDtoToEntity(marcaDTO,marca);
+            marca = marcaRepository.save(marca);
+            return new MarcaDTO(marca);
+        }catch (EntityNotFoundException e){
+            throw new ResourceNotFoundException("Recurso não encontrado!");
+        }
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public void delete(Long id){
+        if(!marcaRepository.existsById(id)){
+            throw new ResourceNotFoundException("Recurso não encontrado!");
+        }
+        try{
+            marcaRepository.deleteById(id);
+        }catch (DataIntegrityViolationException e){
+            throw new DatabaseException("Falha de integridade referencial!");
+        }
+    }
+
+    private void copyDtoToEntity(MarcaDTO marcaDTO, Marca marca) {
+        marca.setNome(marcaDTO.getNome());
+    }
+
 }
