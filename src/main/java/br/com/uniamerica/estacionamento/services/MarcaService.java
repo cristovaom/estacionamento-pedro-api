@@ -8,12 +8,11 @@ import br.com.uniamerica.estacionamento.services.exceptions.ResourceNotFoundExce
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.awt.print.Pageable;
+import java.util.List;
 
 @Service
 public class MarcaService {
@@ -37,6 +36,12 @@ public class MarcaService {
 
         return new MarcaDTO(entity);
     }
+
+    @Transactional(readOnly = true)
+    public List<Marca> listaCompleta() {
+        return marcaRepository.findAll();
+    }
+
     @Transactional
     public MarcaDTO update(Long id,MarcaDTO marcaDTO){
         try{
@@ -63,6 +68,9 @@ public class MarcaService {
 
     private void copyDtoToEntity(MarcaDTO marcaDTO, Marca marca) {
         marca.setNome(marcaDTO.getNome());
+        marca.setCadastro(marcaDTO.getCadastro());
+        marca.setEdicao(marcaDTO.getEdicao());
+        marca.setAtivo(marcaDTO.isAtivo());
     }
 
 }

@@ -2,8 +2,11 @@ package br.com.uniamerica.estacionamento.dto;
 
 import br.com.uniamerica.estacionamento.entities.Marca;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+@RequiredArgsConstructor
 public class MarcaDTO extends AbstractEntityDTO{
 
     @Getter
@@ -18,5 +21,8 @@ public class MarcaDTO extends AbstractEntityDTO{
     public MarcaDTO(Marca entity){
         id = entity.getId();
         nome = entity.getNome();
+        ativo = entity.isAtivo();
+        cadastro = entity.getCadastro();
+        edicao = entity.getEdicao();
     }
 }
