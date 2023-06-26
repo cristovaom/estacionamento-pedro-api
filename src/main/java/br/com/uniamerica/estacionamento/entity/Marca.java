@@ -31,4 +31,6 @@ public class Marca extends AbstractEntity{
 
     @OneToMany
     private List<Modelo> modeloList = new ArrayList<>();
+
+
 }
