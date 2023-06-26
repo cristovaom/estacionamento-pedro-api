@@ -1,4 +1,4 @@
-package br.com.uniamerica.estacionamento.entity;
+package br.com.uniamerica.estacionamento.entities;
 
 public enum Cor {
     AMARELO("AMARELO"),

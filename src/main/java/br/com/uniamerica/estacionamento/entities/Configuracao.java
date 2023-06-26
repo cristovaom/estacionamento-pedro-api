@@ -1,4 +1,4 @@
-package br.com.uniamerica.estacionamento.entity;
+package br.com.uniamerica.estacionamento.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
