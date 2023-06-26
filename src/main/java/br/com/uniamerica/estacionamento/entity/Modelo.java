@@ -10,6 +10,9 @@ import lombok.Setter;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @Audited
 @Entity
@@ -26,4 +29,8 @@ public class Modelo extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "marca_id", nullable = false)
     private Marca marca;
+
+
+    @OneToMany
+    private List<Veiculo> veiculoList = new ArrayList<>();
 }

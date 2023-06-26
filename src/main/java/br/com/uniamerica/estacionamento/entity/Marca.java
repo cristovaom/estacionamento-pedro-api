@@ -3,6 +3,7 @@ package br.com.uniamerica.estacionamento.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -14,6 +15,9 @@ import lombok.Setter;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @Audited
 @Entity
@@ -24,4 +28,7 @@ public class Marca extends AbstractEntity{
     @Setter
     @Column(name = "nome",nullable = false,length = 50,unique = true)
     private String nome;
+
+    @OneToMany
+    private List<Modelo> modeloList = new ArrayList<>();
 }
