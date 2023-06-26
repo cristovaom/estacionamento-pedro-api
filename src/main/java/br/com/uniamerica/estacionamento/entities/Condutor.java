@@ -2,12 +2,16 @@ package br.com.uniamerica.estacionamento.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Audited
@@ -40,4 +44,7 @@ public class Condutor extends AbstractEntity{
     @Setter
     @Column(name = "tempo_desconto")
     private Long tempoDesconto;
+
+    @OneToMany(mappedBy = "condutor")
+    private List<Movimentacao> condutorMovimentacaoList = new ArrayList<>();
 }

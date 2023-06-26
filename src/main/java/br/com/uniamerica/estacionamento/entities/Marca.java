@@ -25,7 +25,7 @@ public class Marca extends AbstractEntity{
     @Column(name = "nome",nullable = false,length = 50,unique = true)
     private String nome;
 
-    @OneToMany
+    @OneToMany(mappedBy = "marca")
     private List<Modelo> modeloList = new ArrayList<>();
 
 

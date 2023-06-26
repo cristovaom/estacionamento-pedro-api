@@ -7,6 +7,9 @@ import lombok.Setter;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @Entity
 @Audited
@@ -40,4 +43,7 @@ public class Veiculo extends AbstractEntity{
     @Setter
     @Column(name = "ano",nullable = false,length = 5)
     private int ano;
+
+    @OneToMany(mappedBy = "veiculo")
+    private List<Movimentacao> movimentacaoList = new ArrayList<>();
 }

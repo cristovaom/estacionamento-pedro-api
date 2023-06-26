@@ -28,6 +28,6 @@ public class Modelo extends AbstractEntity {
     private Marca marca;
 
 
-    @OneToMany
+    @OneToMany(mappedBy = "modelo")
     private List<Veiculo> veiculoList = new ArrayList<>();
 }
