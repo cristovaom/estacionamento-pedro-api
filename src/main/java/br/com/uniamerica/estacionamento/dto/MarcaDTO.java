@@ -17,9 +17,6 @@ public class MarcaDTO extends AbstractEntityDTO{
 
     public MarcaDTO(Marca entity){
         id = entity.getId();
-        cadastro = entity.getCadastro();
-        edicao = entity.getEdicao();
-        ativo = entity.isAtivo();
         nome = entity.getNome();
     }
 }

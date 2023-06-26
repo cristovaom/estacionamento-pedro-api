@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b7d545-1bd6-44e1-97cc-8f0a090f4976" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/AbstractEntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/MarcaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloMarcaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/controllers/MarcaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/controllers/ModeloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/services/MarcaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/services/ModeloService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/AbstractEntityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/AbstractEntityDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/MarcaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/MarcaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloMarcaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/dto/ModeloMarcaDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Condutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Condutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Marca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniamerica/estacionamento/entities/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/AbstractEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Condutor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Configuracao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Cor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Marca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Modelo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Movimentacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Tipo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/uniamerica/estacionamento/entity/Veiculo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -104,7 +114,7 @@
       <workItem from="1685206276999" duration="52000" />
       <workItem from="1685206348049" duration="4771000" />
       <workItem from="1687761475105" duration="830000" />
-      <workItem from="1687762326605" duration="1267000" />
+      <workItem from="1687762326605" duration="4291000" />
     </task>
     <servers />
   </component>

@@ -11,14 +11,17 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public class AbstractEntity {
     @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
     @Getter
+    @Setter
     @Column(name = "cadastro",nullable = false)
     public LocalDateTime cadastro;
     @Getter
+    @Setter
     @Column(name = "edicao")
     public LocalDateTime edicao;
     @Getter
